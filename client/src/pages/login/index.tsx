@@ -19,18 +19,16 @@ export const Login = () => {
               placeholder="email"
             />
             <PasswordInput name="password" placeholder="Пароль" />
-            <CustomButton
-              type="primary"
-              htmlType="submit"
-            >
-					Войти
-				</CustomButton>
+            <CustomButton type="primary" htmlType="submit">
+              Войти
+            </CustomButton>
           </Form>
-			 <Space direction='vertical' size='large'>
-				<Typography.Text>
-					Нет аккаунта? <Link to={Paths.register}>Зарегистрируйтесь</Link>
-				</Typography.Text>
-			 </Space>
+          <Space direction="vertical" size="large">
+            <Typography.Text>
+              Нет аккаунта?{' '}
+              <Link to={Paths.register}>Зарегистрируйтесь</Link>
+            </Typography.Text>
+          </Space>
         </Card>
       </Row>
     </Layout>
