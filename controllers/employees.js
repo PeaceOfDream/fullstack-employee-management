@@ -4,7 +4,7 @@ const { prisma } = require('../prisma/prisma-client');
 const all = async (req, res) => {
   try {
     const employees = await prisma.employee.findMany();
-    res.status(200).json({ employees });
+    res.status(200).json(employees);
   } catch (error) {
     res
       .status(500)
@@ -51,7 +51,7 @@ const remove = async (req, res) => {
         id,
       },
     });
-    res.status(204).json({ message: 'Сотрудник удален' });
+    res.status(204).json('OK');
   } catch (error) {
     return res
       .status(500)
